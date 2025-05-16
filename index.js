@@ -11,7 +11,7 @@ app.use('/',express.static(__dirname +'/public'));
 
 
 io.on('connection', (socket) => {
-    console.log('a user connected');
+    console.log('a user connected',socket.id);
 
 
    socket.on('msg_send',(data)=>{
